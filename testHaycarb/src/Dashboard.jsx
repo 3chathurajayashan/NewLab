@@ -240,23 +240,23 @@ export default function App() {
         </div>
 
         <nav style={{ padding: "12px 10px", flex: 1 }}>
-          <div style={{ fontSize: 9, fontWeight: 700, color: "#d1d5db", textTransform: "uppercase", letterSpacing: "0.1em", padding: "4px 8px 8px" }}>Navigation</div>
+          <div style={{ fontSize: 13, fontWeight: 700, color: "#d1d5db", textTransform: "uppercase", letterSpacing: "0.1em", padding: "4px 8px 8px" }}>Navigation</div>
           {[
-            { id: "gatepass", label: "Gate Pass Entry", dot: null },
-            { id: "history", label: "History", dot: history.length > 0 ? history.length : null },
+            { id: "gatepass", label: "Sample Creation", dot: null },
+            { id: "history", label: "View All Samples", dot: history.length > 0 ? history.length : null },
           ].map(item => (
             <button key={item.id} className="navbtn" onClick={() => setTab(item.id)} style={{
               display: "flex", alignItems: "center", gap: 9, width: "100%",
               padding: "9px 12px", borderRadius: 7, border: "none",
-              background: tab === item.id ? "#eff6ff" : "transparent",
-              color: tab === item.id ? "#2563eb" : "#6b7280",
+              background: tab === item.id ? "#ffffff" : "transparent",
+              color: tab === item.id ? "#000000" : "#6b7280",
               fontWeight: tab === item.id ? 600 : 400,
               fontSize: 13, cursor: "pointer", textAlign: "left", fontFamily: "inherit",
               marginBottom: 2, transition: "background 0.12s",
             }}>
-              <span style={{ width: 7, height: 7, borderRadius: "50%", background: tab === item.id ? "#2563eb" : "#d1d5db", flexShrink: 0 }} />
+              <span style={{ width: 7, height: 7, borderRadius: "50%", background: tab === item.id ? "#eb2525" : "#95afd5", flexShrink: 0 }} />
               {item.label}
-              {item.dot && <span style={{ marginLeft: "auto", background: "#2563eb", color: "#fff", borderRadius: 10, fontSize: 10, fontWeight: 700, padding: "1px 7px" }}>{item.dot}</span>}
+              {item.dot && <span style={{ marginLeft: "auto", background: "#ff0000", color: "#fff", borderRadius: 10, fontSize: 10, fontWeight: 700, padding: "1px 7px" }}>{item.dot}</span>}
             </button>
           ))}
         </nav>
@@ -264,9 +264,9 @@ export default function App() {
         <div style={{ padding: "14px 18px", borderTop: "1px solid #f3f4f6" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
             <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#ffffff", boxShadow: "0 0 0 2px #dcfce7" }} />
-            <span style={{ fontSize: 11, color: "#6b7280", fontWeight: 500 }}>System Online</span>
+            <span style={{ fontSize: 11, color: "#6b7280", fontWeight: 500 }}>System Satus :Online</span>
           </div>
-          <div style={{ fontSize: 10, color: "#d1d5db", marginTop: 4 }}>Node: HCM-001</div>
+          <div style={{ fontSize: 10, color: "#d1d5db", marginTop: 4 }}>HAYCARB PLC</div>
         </div>
       </aside>
 
@@ -274,8 +274,8 @@ export default function App() {
       <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden" }}>
         <header style={{ height: 58, background: "#fff", borderBottom: "1px solid #e5e7eb", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 28px", flexShrink: 0 }}>
           <div>
-            <div style={{ fontWeight: 700, fontSize: 15, color: "#111827" }}>
-              {tab === "gatepass" ? "Gate Pass Entry" : "Submission History"}
+            <div style={{ fontWeight: 700, fontSize: 19, color: "#0b2b08" }}>
+              {tab === "gatepass" ? "Create a New Sample" : "Submission History"}
             </div>
             <div style={{ fontSize: 11, color: "#9ca3af", marginTop: 1 }}>
               {tab === "gatepass" ? `${gp.samples.length} sample${gp.samples.length !== 1 ? "s" : ""} queued` : `${history.length} total submission${history.length !== 1 ? "s" : ""}`}
@@ -313,7 +313,7 @@ export default function App() {
               <div style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 10, overflow: "hidden" }}>
                 <div style={{ padding: "14px 22px", borderBottom: "1px solid #f3f4f6", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <div>
-                    <div style={{ fontWeight: 700, fontSize: 14, color: "#111827" }}>Logistics Declaration</div>
+                    <div style={{ fontWeight: 700, fontSize: 19, color: "#0f4ed7" }}>Logistics Declaration</div>
                     <div style={{ fontSize: 11, color: "#9ca3af", marginTop: 2 }}>Reference identifiers, origin, and routing metadata</div>
                   </div>
                   
@@ -412,7 +412,7 @@ export default function App() {
                       <thead>
                         <tr style={{ background: "#f9fafb", borderBottom: "1px solid #e5e7eb" }}>
                           {[
-                            { label: "#", col: null },
+                            { label: "Number", col: null },
                             { label: "Sample ID", col: "sampleId" },
                             { label: "Test Method", col: "testMethod" },
                             { label: "Unit", col: "unitNumber" },
