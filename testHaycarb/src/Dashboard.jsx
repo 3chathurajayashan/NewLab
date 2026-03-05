@@ -234,7 +234,7 @@ export default function App() {
             <div  ></div>
             <div>
               <div style={{ fontWeight: 800, fontSize: 24, color: "#ffffff" ,letterSpacing:"2px"}}>HAYCARB</div>
-              <div style={{ fontSize: 12, color: "#dadada" }}>Laboratory System </div>
+              <div style={{ fontSize: 12, color: "#dadada" }}>Factory Laboratory System </div>
             </div>
           </div>
         </div>
